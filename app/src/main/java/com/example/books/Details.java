@@ -19,11 +19,13 @@ public class Details extends AppCompatActivity {
         TextView detailsTextView = findViewById(R.id.valuesTextView);
         String details = "Book: ";
 
-        details += MainActivity.book.get(index).getName() + "\nAuthor: ";
-        details += MainActivity.book.get(index).getAuthor() + "\nCategory: ";
-        details += MainActivity.book.get(index).getCategory() + "\nPublish Date: ";
-        details += MainActivity.book.get(index).getPublish_date() + "\nPage Count: ";
-        details += MainActivity.book.get(index).getPage_count() + "\n";
+        MainActivity mainActivity = new MainActivity();
+
+        details += mainActivity.book.get(index).getName() + "\nAuthor: ";
+        details += mainActivity.book.get(index).getAuthor() + "\nCategory: ";
+        details += mainActivity.book.get(index).getCategory() + "\nPublish Date: ";
+        details += mainActivity.book.get(index).getPublishDate() + "\nPage Count: ";
+        details += mainActivity.book.get(index).getPageCount() + "\n";
 
         detailsTextView.setText(details);
     }
